@@ -3,4 +3,5 @@ p-value is the probabiity given the null hypothesis is true, what is the probabi
 
 a is significance level, 
 if p < a, reject the null H0;
+
 if p > a, failed to reject the null H0
