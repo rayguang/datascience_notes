@@ -1,3 +1,13 @@
+### Bias vs Variance
+
+
+### Regularization L1 vs L2
+
+
+### SVM
+
+
+
 ### What is p-value
 p-value is the probabiity given the null hypothesis is true, what is the probability that we observe the sample results:  P( P(what we observed from the sample ) | H0 is true)
 
