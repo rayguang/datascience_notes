@@ -4,8 +4,7 @@
 
 
 ### Regularization L1 vs L2
-[https://explained.ai/regularization/L1vsL2.html#:~:text=From%20a%20practical%20standpoint%2C%20L1,you%20have%20collinear%2Fcodependent%20features.]
-
+[L1 vs L2](https://explained.ai/regularization/L1vsL2.html#:~:text=From%20a%20practical%20standpoint%2C%20L1,you%20have%20collinear%2Fcodependent%20features.)
 
 ### SVM
 
