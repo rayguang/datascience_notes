@@ -9,6 +9,41 @@
 ### SVM
 
 
+### Random Forest
+- bootstrap dataset D(subsampling with replacement) to m dataset, D1, ... Dm. D1 has the same size as D
+- build classifier on each dataset, split the tree with k << d features, where k is set to sqrt(k). Decision tree will split all the way down (kind like overfitting)
+- aggregate the results of all classifier
+- prune: bottom up if the out of error rate does not improve, remove the tree
+
+HPS for RFC:
+- k, is set (no need to tune, set to sqrt(d))
+- m, how many dataset, until you get bored
+
+Pros:
+- No need to preprocess data (e.g., scale of features not matter, cm vs m). Take care of missing data
+- Less prone to overfit vs decision tree
+- Explanability, e.g., feature selection
+- Handle both categorical and continuous variables
+- Fast
+- No need for separate test dataset: out of bag error approx as if error from separate test set (1/3 of the D1 is used as out of bag sample). Train model on whole dateset, for free get unbiased estimator
+- Robust for dealing with high dimensionality, good for feature selection
+- Can "automatically" balance unbalanced dataset
+- bias is not a function of ensemble size and is stable; variance tends to decrease as ensemble size increases. Bagging reduces variance! you can apply bagging to any algo, not only forest of trees.
+
+Cons:
+- Trees can be large, requires pruning
+- Not super good for regression, no precise continuous nature prediction
+- Predicitve model, not a descriptive tool: serve as a black-box, little control on what the model does (i.e., split the tree)
+- Poor for image processing/classification, because pixel correlated and RFC treat each feature independently
+
+Ref:
+https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
+
+Misc:
+strength vs correlation of trees, reduce m (number of features to split in each tree) reduces the correlation and the strengh and vice-versa. Therefore there is an optimal m value
+
+
+
 
 ### What is p-value
 p-value is the probabiity given the null hypothesis is true, what is the probability that we observe the sample results:  P( P(what we observed from the sample ) | H0 is true)
