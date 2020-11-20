@@ -15,11 +15,11 @@
 - aggregate the results of all classifier
 - prune: bottom up if the out of error rate does not improve, remove the tree
 
-HPS for RFC:
+#### HPS for RFC:
 - k, is set (no need to tune, set to sqrt(d))
 - m, how many dataset, until you get bored
 
-Pros:
+#### Pros:
 - No need to preprocess data (e.g., scale of features not matter, cm vs m). Take care of missing data
 - Less prone to overfit vs decision tree
 - Explanability, e.g., feature selection
@@ -30,16 +30,16 @@ Pros:
 - Can "automatically" balance unbalanced dataset
 - bias is not a function of ensemble size and is stable; variance tends to decrease as ensemble size increases. Bagging reduces variance! you can apply bagging to any algo, not only forest of trees.
 
-Cons:
+#### Cons:
 - Trees can be large, requires pruning
 - Not super good for regression, no precise continuous nature prediction
 - Predicitve model, not a descriptive tool: serve as a black-box, little control on what the model does (i.e., split the tree)
 - Poor for image processing/classification, because pixel correlated and RFC treat each feature independently
 
-Ref:
+#### Ref:
 https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
 
-Misc:
+#### Misc:
 strength vs correlation of trees, reduce m (number of features to split in each tree) reduces the correlation and the strengh and vice-versa. Therefore there is an optimal m value
 
 
