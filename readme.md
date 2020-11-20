@@ -8,6 +8,16 @@
 
 ### SVM
 
+### K Nearest Neighbor
+Four steps:
+- Decide Distance metric
+- Decide how many neighbors, odd number
+- Weighted function, all neighbors same or not
+- Local sensitivy hashing to find the neighbors in constant time
+
+#### Cons:
+- Cost lots of memory
+
 
 ### Random Forest
 - bootstrap dataset D(subsampling with replacement) to m dataset, D1, ... Dm. D1 has the same size as D
