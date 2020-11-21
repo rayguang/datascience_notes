@@ -64,6 +64,9 @@ if p < a, reject the null H0;
 
 if p > a, failed to reject the null H0
 
+### Curse of Dimensionality
+As the number of feature (dimension) increases, the amount of data required to generalize the model is exponentially increasing.
+
 ### What is training set, validation set and test set
 ```for each epoch
     for each training data instance
